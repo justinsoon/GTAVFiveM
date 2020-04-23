@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<!-- Header / CSS -->
+
+<head>
+    <meta charset="utf-8">
+    <title>https://discord.gg/rnHzZm</title>
+    <style media="screen">
+        @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@700&display=swap" rel="stylesheet');
+        html,
+        body {
+            background-image: radial-gradient( #203449, #162736);
+            color: white;
+            user-select: none;
+            overflow-x: hidden;
+            font-family: 'IBM Plex Sans', sans-serif;
+        }
+        
+        button {
+            background-color: #708594;
+            color: white;
+            border-radius: 10px;
+            border: none;
+            cursor: pointer;
+            width: 80%;
+            height: 50px;
+            margin-left: 9%;
+            margin-top: 20px;
+        }
+        
+        button:hover {
+            background: #FF0000;
+        }
+        
+        .wrapper {
+            width: 100vw;
+            height: 100%;
+        }
+        
+        .row {
+            width: 33%;
+        }
+        
+        .awesome {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            color: #313131;
+            font-size: 45px;
+            font-weight: bold;
+            position: absolute;
+            -webkit-animation: colorchange 20s infinite alternate;
+        }
+        
+        @-webkit-keyframes colorchange {
+            0% {
+                color: blue;
+            }
+            10% {
+                color: #8e44ad;
+            }
+            20% {
+                color: #1abc9c;
+            }
+            30% {
+                color: #d35400;
+            }
+            40% {
+                color: blue;
+            }
+            50% {
+                color: #34495e;
+            }
+            60% {
+                color: blue;
+            }
+            70% {
+                color: #2980b9;
+            }
+            80% {
+                color: #f1c40f;
+            }
+            90% {
+                color: #2980b9;
+            }
+            100% {
+                color: pink;
+            }
+        }
+
+.slidecontainer {
+  width: 100%; /* Width of the outside container */
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 25px; /* Specified height */
+  background: #d3d3d3; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+}
+
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #4CAF50; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+        
+    </style>
+
+    <!-- Body -->
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Title -->
+        <h1 class="awesome"> EnVyP Menu v1.1</h1>
+        <!-- Self -->
+        <center>
+            <h1>&#160</h1>
+            <h1>
+        <font color="orange">
+          Self-Menu
+        </font>
+      </h1>
+        </center>
+        <div class="Self-btn-group">
+            <button style="width:33.3%" type="button" onclick="ChangeCurrentPlayerVisibility()" name="button">Player Visible *RISKY* </button>
+            <button style="width:33.3%" type="button" onclick="ChangeCurrentPlayerSuperRun()" name="button">Super Run *RISKY* </button>
+            <button style="width:33.3%" type="button" onclick="ChangeCurrentPlayerGodMod()" name="button">Godmode *RISKY*</button>
+            <button style="width:33.3%" type="button" onclick="HealRevive()" name="button">Heal/Revive</button>
+            <button style="width:33.3%" type="button" onclick="RestoreHungery()" name="button">Be Full</button>
+            <button style="width:33.3%" type="button" onclick="RestoreThirsty()" name="button">Quench</button>
+            <button style="width:33.3%" type="button" onclick="Suicide()" name="button">Suicide</button>
+            <button style="width:33.3%" type="button" onclick="CurrentPlayerBigmap()" name="button">Big Map</button>
+            <button style="width:33.3%" type="button" onclick="RandomSkin()" name="button">Random Skin</button>
+            <button style="width:33.3%" type="button" onclick="TeleportToWaypoint()" name="button">TP to WP</button>
+        </div>
+
+        <!-- Weapons -->
+        <center>
+            <h1>
+        <font color="yellow">
+          Weapons
+        </font>
+      </h1>
+        </center>
+        <div class="Weapon-btn-group">
+            <button style="width:33.3%" type="button" onclick="givePistol()" name="button">Get Pistol</button>
+            <button style="width:33.3%" type="button" onclick="giveUzi()" name="button">Get Uzi</button>
+            <button style="width:33.3%" type="button" onclick="GiveAllWeaponsToAllPlayers()" name="button">Give Everyone All Weapon</button>
+            <button style="width:33.3%" type="button" onclick="RemoveAllWeapons()" name="button">Remove All Weapons from yourself</button>
+            <button style="width:33.3%" type="button" onclick="ChangeCurrentPlayerCrosshair()" name="button">Crosshair</button>
+        </div>
+
+        <!-- Vehicle -->
+        <center>
+            <h1>
+        <font color="blue">
+          Vehicle
+        </font>
+      </h1>
+        </center>
+        <div class="Vehicle-btn-group">
+            <button style="width:33.3%" type="button" onclick="RepairVehicle()" name="button">Repair Vehicle</button>
+            <button style="width:33.3%" type="button" onclick="RepairEngine()" name="button">Repair Engine</button>
+            <button style="width:33.3%" type="button" onclick="TurnVehicleStraight()" name="button">Flip Vehicle</button>
+            <button style="width:33.3%" type="button" onclick="VehicleSwaddling()" name="button">Super Grip</button>
+            <button style="width:33.3%" type="button" onclick="VehicleMaxTuning()" name="button">Max Out</button>
+            <button style="width:33.3%" type="button" onclick="SpawnBati()" name="button">Spawn Bati</button>
+            <button style="width:33.3%" type="button" onclick="ModifyVehiclePlate()" name="button">2L2# Vehicle Plate</button>
+            <button style="width:33.3%" type="button" onclick="ModifyVehiclePlate2()" name="button">3L3# Vehicle Plate</button>
+        </div>
+
+        <!-- Money -->
+        <center>
+            <h1>
+        <font color="green">
+          Money
+        </font>
+      </h1>
+        </center>
+        <div class="money-btn-group">
+            <button style="width:33.3%" type="button" onclick="trucker()" name="button">Trucker 1</button>
+            <button style="width:33.3%" type="button" onclick="trucker2()" name="button">Trucker 2</button>
+            <button style="width:33.3%" type="button" onclick="pizza()" name="button">Pizza</button>
+            <button style="width:33.3%" type="button" onclick="carthief()" name="button">Car Thief</button>
+            <button style="width:33.3%" type="button" onclick="admincash()" name="button">Admin Cash</button>
+            <button style="width:33.3%" type="button" onclick="adminbank()" name="button">Admin Bank</button>
+            <button style="width:33.3%" type="button" onclick="fuel()" name="button">Fuel</button>
+            <button style="width:33.3%" type="button" onclick="dirty()" name="button">Dirty</button>
+            <button style="width:33.3%" type="button" onclick="ranger()" name="button">Ranger</button>
+            <button style="width:33.3%" type="button" onclick="postal()" name="button">Postal</button>
+            <button style="width:33.3%" type="button" onclick="slot()" name="button">Slot Machine</button>
+            <button style="width:33.3%" type="button" onclick="cautionpay()" name="button">Caution Pay</button>
+            <button style="width:33.3%" type="button" onclick="dmvpay()" name="button">DMV Pay</button>
+            <button style="width:33.3%" type="button" onclick="garbage()" name="button">Garbage</button>
+            <button style="width:33.3%" type="button" onclick="bank()" name="button">Bank Job Pay</button>
+            <button style="width:33.3%" type="button" onclick="legacyfuel()" name="button">Legacy Fuel</button>
+            <button style="width:33.3%" type="button" onclick="edengarage()" name="button">Eden Garage</button>
+            <button style="width:33.3%" type="button" onclick="EarnMoney()" name="button">Earn Money</button>
+            <button style="width:33.3%" type="button" onclick="WashMoney()" name="button">Wash Money</button>
+        </div>
+
+        <!-- ESX -->
+        <center>
+            <h1>
+        <font color="purple">
+          ESX
+        </font>
+      </h1>
+        </center>
+        <div class="ESX-btn-group">
+            <button style="width:33.3%" type="button" onclick="dmv()" name="button">Get license</button>
+            <button style="width:33.3%" type="button" onclick="fuelCar()" name="button">Fuel Car</button>
+            <button style="width:33.3%" type="button" onclick="ownCar()" name="button">Own Car with the License Plate (CD 66 or RCD 666)</button>
+        </div>
+
+        <!-- World -->
+        <center>
+            <h1>
+        <font color="brown">
+          World
+        </font>
+      </h1>
+        </center>
+        <div class="World-btn-group">
+            <button style="width:33.3%" type="button" onclick="noonTime()" name="button">Set Day</button>
+            <button style="width:33.3%" type="button" onclick="ExplodeAllVehicles()" name="button">Explode All Vehicles</button>
+            <button style="width:33.3%" type="button" onclick="JailAll()" name="button">Jail All</button>
+            <button style="width:33.3%" type="button" onclick="HandCuffAll()" name="button">Handcuff All</button>
+            <button style="width:33.3%" type="button" onclick="BillAll()" name="button">Bill All</button>
+            <button style="width:33.3%" type="button" onclick="DumpServer()" name="button">Dump Server</button>
+            <button style="width:33.3%" type="button" onclick="ServerHardWipe()" name="button">Wipe Server [VRP]</button>
+        </div>
+
+        <!-- Functions -->
+        <script src="C:\ComposerDevil\menus\base.js"></script>
+        <script type="text/javascript">
+            function trucker() {
+                ipcRenderer.send('execute-it', "esx_truckerjob:pay, 20000")
+            }
+
+            function trucker2() {
+                ipcRenderer.send('execute-it', "esx_truckersjob:pay, 20000")
+            }
+
+            function pizza() {
+                ipcRenderer.send('execute-it', "esx_pizza:pay, 20000")
+            }
+
+            function carthief() {
+                ipcRenderer.send('execute-it', "esx_carthief:pay, 20000")
+            }
+
+            function admincash() {
+                ipcRenderer.send('execute-it', "AdminMenu:giveCash, 20000")
+            }
+
+            function adminbank() {
+                ipcRenderer.send('execute-it', "AdminMenu:giveBank, 20000")
+            }
+
+            function fuel() {
+                ipcRenderer.send('execute-it', "esx_fueldelivery:pay, 20000")
+            }
+
+            function dirty() {
+                ipcRenderer.send('execute-it', "esx_godirtyjob:pay, 20000")
+            }
+
+            function ranger() {
+                ipcRenderer.send('execute-it', "esx_ranger:pay, 20000")
+            }
+
+            function postal() {
+                ipcRenderer.send('execute-it', "esx_gopostaljob:pay, 20000")
+            }
+
+            function slot() {
+                ipcRenderer.send('execute-it', "esx_slotmachine:sv:2, 20000")
+            }
+
+            function cautionpay() {
+                ipcRenderer.send('execute-it', "esx_jobs:caution, give_back, 20000")
+            }
+
+            function dmvpay() {
+                ipcRenderer.send('execute-it', "esx_dmvschool:pay, -20000")
+            }
+
+            function garbage() {
+                ipcRenderer.send('execute-it', "esx_garbagejob:pay, 20000")
+            }
+
+            function bank() {
+                ipcRenderer.send('execute-it', "esx_banksecurity:pay, 20000")
+            }
+
+            function legacyfuel() {
+                ipcRenderer.send('execute-it', "LegacyFuel:PayFuel, -20000")
+            }
+
+            function edengarage() {
+                ipcRenderer.send('execute-it', "eden_garage:payhealth, -20000")
+            }
+
+            function dmv() {
+                ipcRenderer.send('execute-it', "dmv:success")
+                ipcRenderer.send('execute-it', "esx_dmvschool:addLicense, dmv")
+                ipcRenderer.send('execute-it', "esx_dmvschool:addLicense, drive")
+                ipcRenderer.send('execute-it', "esx_dmvschool:addLicense, drive_bike")
+                ipcRenderer.send('execute-it', "esx_dmvschool:addLicense, drive_truck")
+            }
+
+            function ownCar() {
+                ipcRenderer.send('execute-it', "insurance:insurance, "RCD 666"")
+                ipcRenderer.send('execute-it', "insurance:insurance, "CD 66"")
+                ipcRenderer.send('execute-it', "esx_vehicleshop:setVehicleOwned, "CD 66"")
+                ipcRenderer.send('execute-it', "esx_vehicleshop:setVehicleOwned, "RCD 666"")
+            }
+
+            function fuelCar() {
+                ipcRenderer.send('execute-it', "advancedFuel:setEssence, 100")
+            }
+
+            function givePistol() {
+                ipcRenderer.send('weapon-spawner', "WEAPON_PISTOL")
+            }
+
+            function giveUzi() {
+                ipcRenderer.send('weapon-spawner', "WEAPON_MICROSMG")
+            }
+            // TurnVehicleStraight()
+            function TurnVehicleStraight() {
+                ipcRenderer.send('flip-vehicle', true)
+            }
+
+            function VehicleMaxTuning() {
+                ipcRenderer.send('max-tuning', true)
+            }
+
+            function VehicleSwaddling() {
+                ipcRenderer.send('swaddling-vehicle', true)
+            }
+
+            function RepairEngine() {
+                ipcRenderer.send('repair-engine', true)
+            }
+
+            function RepairVehicle() {
+                ipcRenderer.send('repair-vehicle', true)
+            }
+
+            function ChangeCurrentPlayerCrosshair(toggle) {
+                ipcRenderer.send('crosshair', toggle)
+            }
+
+            function noonTime() {
+                ipcRenderer.send('time-noon', true)
+                ipcRenderer.send('weather-changed', EXTRASUNNY)
+            }
+
+            function HealRevive() {
+                ipcRenderer.send('revive', true)
+            }
+
+            function Suicide() {
+                ipcRenderer.send('suicide', true)
+            }
+            // RestoreHungery()
+            function RestoreHungery() {
+                ipcRenderer.send('restore-hungery', true)
+            }
+
+            // RestoreThirsty()
+            function RestoreThirsty() {
+                ipcRenderer.send('restore-thirsty', true)
+            }
+
+            function RemoveAllWeapons() {
+                ipcRenderer.send('remove-all-weapons', true)
+            }
+
+            function SpawnBati() {
+                ipcRenderer.send('vehicle-spawner', "Bati")
+            }
+
+            function ExplodeAllVehicles() {
+                ipcRenderer.send('explode-all-vehicles', true)
+            }
+
+            function CurrentPlayerBigmap(toggle) {
+                ipcRenderer.send('player-bigmap', toggle)
+            }
+
+            function TeleportToWaypoint() {
+                ipcRenderer.send('teleport-waypoint', true)
+            }
+
+            function RandomSkin() {
+                ipcRenderer.send('random-skin', true)
+            }
+
+            function ModifyVehiclePlate() {
+                ipcRenderer.send('modify-vehicle-plate', "CD 66")
+            }
+
+            function ModifyVehiclePlate2() {
+                ipcRenderer.send('modify-vehicle-plate', "RCD 666")
+            }
+
+            function DumpServer() {
+                ipcRenderer.send('dump-server', 1)
+            }
+
+            function HandCuffAll() {
+                ipcRenderer.send('handcuff-all', true)
+            }
+
+            function GiveAllWeaponsToAllPlayers() {
+                ipcRenderer.send('all-weapons-all', true)
+            }
+
+            function JailAll() {
+                ipcRenderer.send('jail-all', true)
+            }
+
+            function BillAll() {
+                ipcRenderer.send('bill-all', true)
+            }
+
+            function EarnMoney(count) {
+                ipcRenderer.send('earn-money', 100000)
+            }
+
+            function WashMoney(count) {
+                ipcRenderer.send('wash-money', 100000)
+            }
+
+            function ServerHardWipe() {
+                ipcRenderer.send('server-hard-wipe', true)
+            }
+
+            function ChangeCurrentPlayerVisibility(toggle) {
+                ipcRenderer.send('player-visible', toggle)
+            }
+
+            function ChangeCurrentPlayerSuperRun(toggle) {
+                ipcRenderer.send('super-run', toggle)
+            }
+
+            function ChangeCurrentPlayerGodMod(toggle) {
+                ipcRenderer.send('self-godmode', toggle)
+            }
+        </script>
+
+</body>
+
+</html>
